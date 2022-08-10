@@ -1,0 +1,166 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1c1c1c;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Karla";
+}
+
+p,
+.btn,
+.pw {
+  font-family: "Inter";
+}
+
+section {
+  background-color: #1f2937;
+  padding: 7.375rem 3rem 3rem;
+  margin: 1rem;
+}
+
+@media (max-width: 450px) {
+  .container {
+    padding-top: 0;
+  }
+}
+
+.title {
+  width: min(100%, 354px);
+}
+
+@media (max-width: 450px) {
+  .title {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+.title__h1 {
+  font-size: 40px;
+  color: #fff;
+  line-height: 40px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 5px;
+}
+
+.title__h1 span {
+  color: #10b981;
+}
+
+.title__p {
+  margin-top: 5px;
+  margin-bottom: 80px;
+  color: #d5d4d8;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+@media (max-width: 450px) {
+  .form {
+    margin-inline: auto;
+    flex-direction: column;
+    max-width: 250px;
+  }
+}
+
+.form__input {
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  padding: 9px 17px;
+}
+
+#pw__one {
+  outline: none;
+  border: none;
+}
+
+.form__btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  background-color: #10b981;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 17px;
+  color: white;
+  font-weight: 500;
+}
+
+.form__btn:hover {
+  cursor: pointer;
+  background-color: hsl(160, 84%, 35%);
+}
+
+.form__btn:focus,
+.form__input:focus {
+  outline: none;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: #2f3e53;
+  margin: 35px 0;
+}
+
+.pw {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.pw__output--dots,
+.pw__output--copy {
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 40px;
+  background-color: #273549;
+  border-radius: 6px;
+  color: #10b981;
+  padding: 0 1rem;
+}
+
+.pw__output--dots {
+  justify-content: center;
+}
+
+.pw__output--copy:hover {
+  background-color: hsl(215.3, 30%, 20%);
+  cursor: pointer;
+}
+
+.pw__output--dots::before,
+.pw__output--copy::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+
+.pw__output--dots::before {
+  background: url("svg/dots.svg");
+}
+
+.pw__output--copy::after {
+  background: url("svg/copy.svg");
+  right: 1rem;
+}
